@@ -334,8 +334,8 @@
 
             // 37.422424, -122.085661
 
-            var latitude = 37.422424,
-                longitude = -122.085661,
+            var latitude = 41.9680101,
+                longitude = -71.1851943,
                 map_zoom = 14,
                 main_color = '#0054a5',
                 saturation_value = -30,
