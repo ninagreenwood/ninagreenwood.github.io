@@ -8,10 +8,10 @@ $(function() {
       submitSuccess: function($form, event) {
         event.preventDefault(); // prevent default submit behaviour
         // get values from FORM
-        var name = $("input#cName").val();
-        var email = $("input#cEmail").val();
-        var website = $("input#cWebsite").val();
-        var message = $("textarea#cMessage").val();
+        var name = $("input#name").val();
+        var email = $("input#email").val();
+        var website = $("input#website").val();
+        var message = $("textarea#message").val();
         var firstName = name; // For Success/Failure Message
         // Check for white space in name for Success/Fail message
         if (firstName.indexOf(' ') >= 0) {
@@ -27,7 +27,7 @@ $(function() {
             website: website,
             email: email,
             message: message,
-            _subject:'Someone reached out through ParknGo.io',
+            _subject:'Someone reached out through the blog',
           },
           dataType:"json",
           cache: false,

@@ -143,23 +143,23 @@
                 -->
                 <h4>Get In Touch</h4>
 
-                <form id="cForm" class="contact-form" method="POST" novalidate="novalidate">
+                <form id="cForm" class="contact-form" name="sentMessage" method="POST" novalidate="novalidate">
                     <fieldset>
 
                         <div>
-                            <input name="cName" id="cName" class="full-width" placeholder="Your Name*" value="" type="text">
+                            <input name="cName" id="name" class="full-width" placeholder="Your Name*" required="required"  value="" type="text">
                         </div>
 
                         <div class="form-field">
-                            <input name="cEmail" id="cEmail" class="full-width" placeholder="Your Email*" value="" type="text">
+                            <input name="cEmail" id="email" class="full-width" placeholder="Your Email*" required="required" value="" type="email">
                         </div>
 
                         <div class="form-field">
-                            <input name="cWebsite" id="cWebsite" class="full-width" placeholder="Website" value="" type="text">
+                            <input name="cWebsite" id="website" class="full-width" placeholder="Website" required="required" value="" type="text">
                         </div>
 
                         <div class="message form-field">
-                        <textarea name="cMessage" id="cMessage" class="full-width" placeholder="Your Message*"></textarea>
+                        <textarea name="cMessage" id="message" class="full-width" required="required" placeholder="Your Message*"></textarea>
                         </div>
 
                         <button type="submit" id="sendMessageButton" class="submit btn btn--primary btn--large full-width">Send Message</button>
@@ -315,6 +315,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Nina 
     <script src="js/plugins.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTDOwJ5xukeY7zplnvoGSZvuM7QFG6tOQ&callback=initMap"></script>
     <script src="js/main.js"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
 </body>
