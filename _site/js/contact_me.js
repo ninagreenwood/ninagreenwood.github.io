@@ -10,7 +10,6 @@ $(function() {
         // get values from FORM
         var name = $("input#name").val();
         var email = $("input#email").val();
-        var website = $("input#website").val();
         var message = $("textarea#message").val();
         var firstName = name; // For Success/Failure Message
         // Check for white space in name for Success/Fail message
@@ -24,32 +23,31 @@ $(function() {
           type: "POST",
           data: {
             name: name,
-            website: website,
             email: email,
             message: message,
-            _subject:'Someone reached out through the blog',
+            _subject:"Someone reached out through Nina's blog",
           },
           dataType:"json",
           cache: false,
           success: function() {
             // Success message
-            $('#success').html("<div class='alert alert-success'>");
-            $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+            $('#success').html("<div>");
+            $('#success').html("<button type='button' data-dismiss='alert'")
               .append("</button>");
-            $('#success > .alert-success')
+            $('#success')
               .append("<strong>Your message has been sent. </strong>");
-            $('#success > .alert-success')
+            $('#success')
               .append('</div>');
             //clear all fields
             $('#cForm').trigger("reset");
           },
           error: function() {
             // Fail message
-            $('#success').html("<div class='alert alert-danger'>");
-            $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+            $('#success').html("<div>");
+            $('#success').html("<button type='button' data-dismiss='alert'")
               .append("</button>");
-            $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
-            $('#success > .alert-danger').append('</div>');
+            $('#success').append($("<strong>").text("Sorry " + firstName + ", it seems that you have entered the email incorrectly or my mail server is not responding. Please try again!"));
+            $('#success').append('</div>');
             //clear all fields
             $('#cForm').trigger("reset");
           },
@@ -72,7 +70,7 @@ $(function() {
   });
   
   /*When clicking on Full hide fail/success boxes */
-  $('#cName').focus(function() {
+  $('#name').focus(function() {
     $('#success').html('');
   });
   

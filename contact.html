@@ -147,21 +147,17 @@
                     <fieldset>
 
                         <div>
-                            <input name="cName" id="name" class="full-width" placeholder="Your Name*" required="required"  value="" type="text">
+                            <input name="cName" id="name" class="full-width" placeholder="Your Name*" required="required"  type="text"  data-validation-required-message="Please enter your name.">
                         </div>
 
                         <div class="form-field">
-                            <input name="cEmail" id="email" class="full-width" placeholder="Your Email*" required="required" value="" type="email">
-                        </div>
-
-                        <div class="form-field">
-                            <input name="cWebsite" id="website" class="full-width" placeholder="Website" required="required" value="" type="text">
+                            <input name="cEmail" id="email" class="full-width" placeholder="Your Email*" required="required" type="email" data-validation-required-message="Please enter your email address.">
                         </div>
 
                         <div class="message form-field">
                         <textarea name="cMessage" id="message" class="full-width" required="required" placeholder="Your Message*"></textarea>
                         </div>
-
+                        <div id="success"></div>
                         <button type="submit" id="sendMessageButton" class="submit btn btn--primary btn--large full-width">Send Message</button>
 
                     </fieldset>
@@ -315,7 +311,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Nina 
     <script src="js/plugins.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTDOwJ5xukeY7zplnvoGSZvuM7QFG6tOQ&callback=initMap"></script>
     <script src="js/main.js"></script>
-    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/jsBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
 </body>
