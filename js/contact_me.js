@@ -1,6 +1,6 @@
 $(function() {
 
-    $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
+    $("#cForm input,#cForm textarea").jqBootstrapValidation({
       preventSubmit: true,
       submitError: function($form, event, errors) {
         // additional error messages or events
@@ -8,10 +8,10 @@ $(function() {
       submitSuccess: function($form, event) {
         event.preventDefault(); // prevent default submit behaviour
         // get values from FORM
-        var name = $("input#name").val();
-        var email = $("input#email").val();
-        var phone = $("input#phone").val();
-        var message = $("textarea#message").val();
+        var name = $("input#cName").val();
+        var email = $("input#cEmail").val();
+        var phone = $("input#cWebsite").val();
+        var message = $("textarea#cMessage").val();
         var firstName = name; // For Success/Failure Message
         // Check for white space in name for Success/Fail message
         if (firstName.indexOf(' ') >= 0) {
@@ -20,7 +20,7 @@ $(function() {
         $this = $("#sendMessageButton");
         $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
         $.ajax({
-          url: "https://formspree.io/ioparkngo@gmail.com",
+          url: "https://formspree.io/amalrkrishna94@gmail.com",
           type: "POST",
           data: {
             name: name,
@@ -41,7 +41,7 @@ $(function() {
             $('#success > .alert-success')
               .append('</div>');
             //clear all fields
-            $('#contactForm').trigger("reset");
+            $('#cForm').trigger("reset");
           },
           error: function() {
             // Fail message
@@ -51,7 +51,7 @@ $(function() {
             $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
             $('#success > .alert-danger').append('</div>');
             //clear all fields
-            $('#contactForm').trigger("reset");
+            $('#cForm').trigger("reset");
           },
           complete: function() {
             setTimeout(function() {
