@@ -10,7 +10,7 @@ $(function() {
         // get values from FORM
         var name = $("input#cName").val();
         var email = $("input#cEmail").val();
-        var phone = $("input#cWebsite").val();
+        var website = $("input#cWebsite").val();
         var message = $("textarea#cMessage").val();
         var firstName = name; // For Success/Failure Message
         // Check for white space in name for Success/Fail message
@@ -24,7 +24,7 @@ $(function() {
           type: "POST",
           data: {
             name: name,
-            phone: phone,
+            website: website,
             email: email,
             message: message,
             _subject:'Someone reached out through ParknGo.io',
@@ -72,7 +72,7 @@ $(function() {
   });
   
   /*When clicking on Full hide fail/success boxes */
-  $('#name').focus(function() {
+  $('#cName').focus(function() {
     $('#success').html('');
   });
   
